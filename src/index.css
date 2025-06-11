@@ -1,1 +1,43 @@
 @import "tailwindcss";
+.scroll-mask {
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-left {
+  animation: scrollLeft 20s linear infinite;
+  display: flex;
+  width: max-content;
+  gap: 1.5rem; /* same as Tailwind's gap-6 */
+}
+
+.scroll-mask::before,
+.scroll-mask::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px; /* width of fade on each side */
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.scroll-mask::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.scroll-mask::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
