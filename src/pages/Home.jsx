@@ -2,6 +2,7 @@ import Assisted from "../component/Assisted ";
 import Customer from "../component/Customer";
 import Hero from "../component/hero/Hero";
 import Navbar from "../component/Navbar";
+import Section_Second from "../component/Section_Second";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
           <Hero />
           <Assisted />
           <Customer />
+          <Section_Second />
         </section>
       </main>
     </div>

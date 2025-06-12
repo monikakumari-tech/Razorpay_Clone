@@ -41,3 +41,20 @@
   }
 }
 
+.bold{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.notched-cornor {
+
+  clip-path: polygon(
+    0 0%,
+    10% 0,
+    90% 0,
+    100% 10%,
+    100% 100%,
+    100% 100%,
+    10% 100%,
+    0% 90%
+  )
+}
