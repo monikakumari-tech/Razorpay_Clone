@@ -77,7 +77,7 @@ const Customer = () => {
 
   return (
     <div className="scroll-mask mt-[-30px] overflow-hidden">
-      <div className="scroll-left gap-30 flex items-center">
+      <div className="scroll-left gap-30 flex items-center grayscale filter transition duration-300 hover:grayscale-0">
         {loopedLogos.map(({ src, alt, width }, index) => (
           <div key={index}>
             <img src={src} alt={alt} className={width} />
